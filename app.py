@@ -21,7 +21,6 @@ engine = create_engine("sqlite:///db/belly_button_biodiversity.sqlite", echo=Fal
 
 Base = automap_base()
 Base.prepare(engine, reflect=True)
-# print(Base.metadata.tables.keys())
 Sample = Base.classes.samples
 OTU = Base.classes.otu
 Metadata = Base.classes.samples_metadata

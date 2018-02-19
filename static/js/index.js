@@ -46,9 +46,26 @@ function updatePie(sample) {
         };
         var data = [trace]
         var layout = {
-            title: "Top 10 Samples"
-        }
-        Plotly.newPlot("pieChart", data)
+            margin: {
+                l: 10,
+                r: 10,
+                b: 10,
+                t: 10,
+                pad: 4
+            }
+        }   
+        // var layout = {
+        //     autosize: false,
+        //     width: 500,
+        //     height: 500,
+        //     margin: {
+        //       l: 50,
+        //       r: 50,
+        //       b: 100,
+        //       t: 100,
+        //       pad: 4
+            // },
+        Plotly.newPlot("pieChart", data, layout)
     });
 };
 

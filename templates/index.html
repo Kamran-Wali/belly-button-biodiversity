@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <title>Belly Button Biodiversity</title>
 </head>
+
 <body>
     <div class="jumbotron">
         <div class="container">
@@ -16,21 +18,46 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-md-2">
-                <select id="selDataset" onchange="optionChanged(this.value)"></select>
-                <ul id = "sampleMetadata"></ul>
+            <div class="col-md-1"></div>
+            <div class="col-md-3">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Selected Sample</h3>
+                    </div>
+                    <div class="panel-body">
+                        <select id="selDataset" onchange="optionChanged(this.value)"></select>
+                        <ul id="sampleMetadata"></ul>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-6">
-                <div id="pieChart"></div>
+            <div class="col-md-7">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Most Prominent OTUs</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div id="pieChart"></div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="row">
+            <div class="col-md-1"></div>
             <div class="col-md-10">
-                <div id="bubbleChart"></div>
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">All OTU Results</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div id="bubbleChart"></div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="{{ url_for('static', filename='js/index.js') }}"></script>
 </body>
+
 </html>
